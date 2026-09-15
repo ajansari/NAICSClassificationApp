@@ -1,6 +1,8 @@
 namespace OnlyCopilotFans.NAICSClassification;
 
 using Microsoft.Sales.Customer;
+using Microsoft.Sales.Document;
+using Microsoft.Sales.History;
 
 table 60470 "ocpf NAICS Code"
 {
@@ -55,9 +57,19 @@ table 60470 "ocpf NAICS Code"
     trigger OnDelete()
     var
         Customer: Record Customer;
+        SalesHeader: Record "Sales Header";
+        SalesInvoiceHeader: Record "Sales Invoice Header";
+        SalesCrMemoHeader: Record "Sales Cr.Memo Header";
     begin
         Customer.SetRange("NAICS Code", Rec.Code);
-        if not Customer.IsEmpty() then
+        SalesHeader.SetRange("NAICS Code", Rec.Code);
+        SalesInvoiceHeader.SetRange("NAICS Code", Rec.Code);
+        SalesCrMemoHeader.SetRange("NAICS Code", Rec.Code);
+        if not Customer.IsEmpty()
+            or not SalesHeader.IsEmpty()
+            or not SalesInvoiceHeader.IsEmpty()
+            or not SalesCrMemoHeader.IsEmpty()
+        then
             Error(DeleteBlockedErr);
     end;
 

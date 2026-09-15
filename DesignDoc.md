@@ -112,7 +112,7 @@ unallocated, meeting Standards §5.2's "up to 50 objects → 10 IDs reserved" mi
 | 60483 | `"ocpf Sales Return Order Ext"` | pageextension (extends `"Sales Return Order"`) |
 | 60484 | `"ocpf Blanket Sales Order Ext"` | pageextension (extends `"Blanket Sales Order"`) |
 | 60485 | `"ocpf Posted Sales Invoice Ext"` | pageextension (extends `"Posted Sales Invoice"`) |
-| 60486 | `"ocpf Posted Sales Credit Memo Ext"` | pageextension (extends `"Posted Sales Credit Memo"`) |
+| 60486 | `"ocpf Posted Sales CrMemo Ext"` | pageextension (extends `"Posted Sales Credit Memo"`) — `Credit Memo` → `CrMemo` (Standards §4.2), full name is 34 chars, over the 30-char limit |
 | 60487 | `"ocpf Sales Post Subscribers"` | codeunit |
 | 60488 | `"OCPF - READ"` | permissionset |
 | 60489 | `"OCPF - READ/WRITE"` | permissionset |

@@ -75,6 +75,6 @@ against — no rule changed, no design assumption was wrong).
   field the six document page extensions and the posting codeunit all depend on) → the six
   document page extensions (Quote, Order, Invoice, Credit Memo, Return Order, Blanket Order, any
   order among themselves) → `"ocpf Sales Invoice Header Ext"` → `"ocpf Sales Cr Memo Header Ext"`
-  → `"ocpf Posted Sales Invoice Ext"` → `"ocpf Posted Sales Credit Memo Ext"` →
+  → `"ocpf Posted Sales Invoice Ext"` → `"ocpf Posted Sales CrMemo Ext"` →
   `"ocpf Sales Post Subscribers"` (codeunit last, since it references fields on four other
   objects generated earlier).

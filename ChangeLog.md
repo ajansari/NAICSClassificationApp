@@ -96,3 +96,25 @@ warnings) after the fix.
 `DesignDoc.md`, `PreflightChecklist.md`.
 
 **Design Doc updated:** yes.
+
+---
+
+## Issue 4 — Object identifier exceeded the 30-character limit
+
+**Problem:** Batch 2's compile failed with AL0305 on `pageextension 60486`: the object name
+`"ocpf Posted Sales Credit Memo Ext"` is 34 characters, over AL's 30-character identifier limit.
+
+**Root cause:** `DesignDoc.md`'s Step 2 self-check explicitly checked "all entity/field names ≤
+30 characters" but only spot-checked a couple of examples (`naicsCode`, `parentCode`) rather than
+counting every object name — this one was missed. Standards §4.2's abbreviation table (which
+lists `Credit Memo` → `CrMemo`) exists exactly for cases like this and wasn't applied here at
+design time.
+
+**Resolution:** Renamed to `"ocpf Posted Sales CrMemo Ext"` (28 characters), applying the
+Standards-listed abbreviation. Updated `DesignDoc.md`'s object ID table and
+`PreflightChecklist.md`'s Batch 2 generation-order note to match. Recompiled clean.
+
+**Files affected:** `src/PageExtension/PostedSalesCreditMemoExt.PageExt.al`, `DesignDoc.md`,
+`PreflightChecklist.md`.
+
+**Design Doc updated:** yes.
