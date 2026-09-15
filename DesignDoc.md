@@ -86,7 +86,7 @@ Set per Standards §2.2 (master data and open documents editable; posted entries
 | Publisher | OnlyCopilotFans |
 | Namespace | `OnlyCopilotFans.NAICSClassification` |
 | AL Object Prefix | `ocpf` |
-| Permission Set Prefix | `OCPF - ` |
+| Permission Set Prefix | `OCPF NAICS - ` (revised 2026-09-15 — see `ChangeLog.md` Issue 5) |
 | Object ID range | 60470–60499 (Primary; no Additional) |
 | AL Runtime / BC Application Minimum | 17.0 / 28.0.0.0 (pending re-confirmation) |
 | Symbol Source | MS Learn Base Application docs (Operating Rule 2 fallback — see blocker note) |
@@ -114,8 +114,8 @@ unallocated, meeting Standards §5.2's "up to 50 objects → 10 IDs reserved" mi
 | 60485 | `"ocpf Posted Sales Invoice Ext"` | pageextension (extends `"Posted Sales Invoice"`) |
 | 60486 | `"ocpf Posted Sales CrMemo Ext"` | pageextension (extends `"Posted Sales Credit Memo"`) — `Credit Memo` → `CrMemo` (Standards §4.2), full name is 34 chars, over the 30-char limit |
 | 60487 | `"ocpf Sales Post Subscribers"` | codeunit |
-| 60488 | `"OCPF - READ"` | permissionset |
-| 60489 | `"OCPF - READ/WRITE"` | permissionset |
+| 60488 | `"OCPF NAICS - READ"` | permissionset |
+| 60489 | `"OCPF NAICS - RW"` | permissionset |
 
 ### Standard object reference table
 
@@ -455,12 +455,12 @@ code, no empty triggers — both procedures do exactly one field copy. **This ha
 successfully against the real downloaded symbols** (not just MS-Learn-verified) — see
 `ProjectParameters.md`.
 
-#### 17. Permission set 60488 `"OCPF - READ"`
+#### 17. Permission set 60488 `"OCPF NAICS - READ"`
 
 ```al
 namespace OnlyCopilotFans.NAICSClassification;
 
-permissionset 60488 "OCPF - READ"
+permissionset 60488 "OCPF NAICS - READ"
 {
     Caption = 'OCPF NAICS Classification - Read';
     Assignable = true;
@@ -478,25 +478,31 @@ governed by BC's own base permission sets (`D365 READ` / `D365 BUS FULL ACCESS`)
 extension's permission sets. Page extensions and table extensions attach to base pages/tables
 already covered by those base sets — no separate `page X` grant needed for them.
 
-#### 18. Permission set 60489 `"OCPF - READ/WRITE"`
+#### 18. Permission set 60489 `"OCPF NAICS - RW"`
 
 ```al
 namespace OnlyCopilotFans.NAICSClassification;
 
-permissionset 60489 "OCPF - READ/WRITE"
+permissionset 60489 "OCPF NAICS - RW"
 {
     Caption = 'OCPF NAICS Classification - Read/Write';
     Assignable = true;
-    IncludedPermissionSets = "OCPF - READ";
+    IncludedPermissionSets = "OCPF NAICS - READ";
 
     Permissions =
         tabledata "ocpf NAICS Code" = RIMD;
 }
 ```
 
+**Naming note (revised 2026-09-15, `ChangeLog.md` Issue 5):** the read/write set's Name is
+abbreviated to `RW` rather than `READ/WRITE` — `"OCPF NAICS - READ/WRITE"` would be 24
+characters, over the 20-character limit AL enforces on `Assignable = true` permission sets
+(Compiler Error AL0305). `Caption` keeps the full "Read/Write" wording since it isn't subject to
+that limit.
+
 **Deployment note** (Standards §5.3): consumers also need base permissions —
-read-only consumers: `OCPF - READ` + `D365 READ`; read/write consumers: `OCPF - READ/WRITE` +
-`D365 BUS FULL ACCESS`.
+read-only consumers: `OCPF NAICS - READ` + `D365 READ`; read/write consumers:
+`OCPF NAICS - RW` + `D365 BUS FULL ACCESS`.
 
 ---
 

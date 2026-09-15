@@ -51,9 +51,9 @@ Blanket Sales Order**:
     lookup.
 
 ### Permission sets
-14. As a user assigned only `OCPF - READ` (+ `D365 READ`): confirm NAICS Codes can be viewed but
+14. As a user assigned only `OCPF NAICS - READ` (+ `D365 READ`): confirm NAICS Codes can be viewed but
     not created/edited/deleted.
-15. As a user assigned `OCPF - READ/WRITE` (+ `D365 BUS FULL ACCESS`): confirm full create/edit/
+15. As a user assigned `OCPF NAICS - RW` (+ `D365 BUS FULL ACCESS`): confirm full create/edit/
     delete access to NAICS Codes.
 
 ---
@@ -71,7 +71,7 @@ Blanket Sales Order**:
     to log and fix.)
 18. On a Customer Card or sales document, try to type a NAICS Code that doesn't exist in the list
     (bypass the lookup, e.g. paste text). Expect a validation error, not a silent accept.
-19. As a user assigned only `OCPF - READ` (no write), attempt to create a new NAICS Code directly
+19. As a user assigned only `OCPF NAICS - READ` (no write), attempt to create a new NAICS Code directly
     (not via the UI action, if your test approach allows attempting the underlying write).
     Expect a permission error, not success.
 20. As a user with no `OCPF -` permission set assigned at all, open the NAICS Codes page. Expect

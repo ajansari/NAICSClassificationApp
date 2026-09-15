@@ -14,7 +14,7 @@
 | **Localization** | US | NAICS is the US/North American standard classification |
 | **AL Object Prefix** | `ocpf` | Used in page names/identifiers |
 | **APIPublisher / APIGroup Prefix / APIVersion** | N/A | No API pages/queries in this project (confirmed 2026-09-15) |
-| **Permission Set Prefix** | `OCPF - ` | Uppercase, no AL quotes |
+| **Permission Set Prefix** | `OCPF NAICS - ` | Uppercase, no AL quotes. **Revised 2026-09-15** (was `OCPF - `): the publisher-only prefix collided with other OnlyCopilotFans extensions that also use the `OCPF` object prefix — BC permission sets are keyed by (App ID, Permission Set ID), but the Name/Role ID is still only 20 characters and BC's Permission Sets UI/publish path fails when two different extensions register the same Name. Adding the extension code (`NAICS`) makes the Name unique across projects. See `ChangeLog.md` Issue 5. The read/write set's suffix is abbreviated to `RW` (not `READ/WRITE`) to stay under the 20-character limit for `Assignable = true` permission sets (`OCPF NAICS - READ/WRITE` would be 24 characters). |
 | **Object ID range(s)** | Primary: **60470–60499** (30 IDs). No Additional ranges. | Covers all 19 planned objects + buffer (Standards §5.2) |
 | **Permission Sets required?** | Yes | Extension owns the new NAICS Code table → `PTE0004` requires it. 2 IDs reserved. |
 | **AL Runtime** | 17.0 | Confirmed against the real Base Application manifest (`NavxManifest.xml`: `Platform="28.0.0.0" Runtime="17.0"`) — matches `app.json` exactly, no change needed. |

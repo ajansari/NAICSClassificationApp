@@ -96,8 +96,8 @@ record.
 
 | Permission set | Grants |
 |---|---|
-| `OCPF - READ` | `tabledata "ocpf NAICS Code" = R`, `page "ocpf NAICS Code List"/"ocpf NAICS Code Card" = X` |
-| `OCPF - READ/WRITE` | Includes `OCPF - READ`, plus `tabledata "ocpf NAICS Code" = RIMD` |
+| `OCPF NAICS - READ` | `tabledata "ocpf NAICS Code" = R`, `page "ocpf NAICS Code List"/"ocpf NAICS Code Card" = X` |
+| `OCPF NAICS - RW` | Includes `OCPF NAICS - READ`, plus `tabledata "ocpf NAICS Code" = RIMD` |
 
 Only `"ocpf NAICS Code"` needs a grant — this is the only table the extension owns. Access to the
 extended base tables (Customer, Sales Header, etc.) comes from Business Central's own base
@@ -156,8 +156,8 @@ possible — the lookup only offers valid codes.
   through Extension Management (or `AL: Publish` from VS Code against a sandbox first). No setup
   wizard — the extension is usable immediately after install (Departments placement is the only
   onboarding extra configured; no Assisted Setup Wizard or Role Center Cues).
-- **Permission sets → roles:** assign `OCPF - READ` (+ `D365 READ`) to users who should only view
-  NAICS Codes; assign `OCPF - READ/WRITE` (+ `D365 BUS FULL ACCESS`) to users who maintain the
+- **Permission sets → roles:** assign `OCPF NAICS - READ` (+ `D365 READ`) to users who should only view
+  NAICS Codes; assign `OCPF NAICS - RW` (+ `D365 BUS FULL ACCESS`) to users who maintain the
   NAICS Code list or need to override the code on a document.
 - **Uninstall:** standard Extension Management uninstall. Uninstalling removes the `NAICS Code`
   columns from Customer/Sales documents and the NAICS Code table itself; there is no separate

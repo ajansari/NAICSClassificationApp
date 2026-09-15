@@ -141,6 +141,41 @@ Standards-listed abbreviation. Updated `DesignDoc.md`'s object ID table and
 
 ---
 
+## Issue 5 — Permission set names collided with other OCPF-prefixed extensions
+
+**Problem:** AJ Ansari reported that publishing this extension's package to a BC environment
+that already had another OnlyCopilotFans-built extension installed failed to deploy, because
+both extensions' permission sets shared the same Name: `"OCPF - READ"` / `"OCPF - READ/WRITE"`.
+
+**Root cause:** `ProjectParameters.md`'s Permission Set Prefix (`OCPF - `) was derived from the
+*publisher* abbreviation only, not from anything specific to this extension. Every
+OnlyCopilotFans project built with this framework uses the same `ocpf`/`OCPF` abbreviation for
+its AL Object Prefix and Permission Set Prefix, so any two OCPF extensions that both own tables
+produce permission sets with identical Names. BC permission sets are technically keyed by
+(App ID, Permission Set ID), so this doesn't collide at the metadata level — but the Name/Role ID
+is still capped at 20 characters and shared across all installed extensions in the Permission
+Sets UI and publish path, which fails (`"The record in table Permission Set Buffer already
+exists"`-class error) when two extensions register the same Name. Standards §5.3's example
+naming pattern (`<PREFIX> - READ` / `<PREFIX> - READ/WRITE`) doesn't account for this
+multi-extension-same-publisher scenario — flagged as a candidate fix for the Standards Guide/
+patterns library, not something to silently work around per-project again.
+
+**Resolution:** Revised the Permission Set Prefix to `OCPF NAICS - ` (extension code added), per
+AJ Ansari's decision (2026-09-15, via options box: keep the `OCPF` publisher token, abbreviate
+the read/write suffix). New names: `"OCPF NAICS - READ"` (60488, 17 chars) and
+`"OCPF NAICS - RW"` (60489, 15 chars) — `READ/WRITE` was dropped in favor of `RW` because
+`"OCPF NAICS - READ/WRITE"` would be 24 characters, over AL's 20-character limit for
+`Assignable = true` permission sets (Compiler Error AL0305). `Caption` values are unchanged and
+keep the full "Read/Write" wording. Recompiled clean (0 errors, 0 warnings) and repackaged.
+
+**Files affected:** `src/PermissionSet/OcpfRead.PermissionSet.al`,
+`src/PermissionSet/OcpfReadWrite.PermissionSet.al`, `ProjectParameters.md`, `DesignDoc.md`,
+`Docs.md`, `TestScript.md`, `PreflightChecklist.md`.
+
+**Design Doc updated:** yes.
+
+---
+
 ## Deferred 1 — NAICS Code `OnDelete` does not check self-referencing `Parent Code`
 
 **Problem:** `DesignDoc.md`'s deletion-behavior decision for `"ocpf NAICS Code"` (block-if-

@@ -36,7 +36,7 @@ Run both passes on every object during Step 4, before moving to the next object 
 - [ ] Dead-code check: no empty triggers, no `// TODO`, no commented-out fields (Standards §1.5).
 - [ ] 4-space indentation, no tabs (Standards §1.6).
 - [ ] Permission-set `tabledata` coverage: only `"ocpf NAICS Code"` needs a grant (the only table
-      this extension owns) — confirm both `"OCPF - READ"` and `"OCPF - READ/WRITE"` cover it
+      this extension owns) — confirm both `"OCPF NAICS - READ"` and `"OCPF NAICS - RW"` cover it
       before moving past the object that introduces the table (Batch 1).
 - [ ] **Symbol verification** for every standard/base reference — table numbers, field names,
       `using` namespaces, enum values, event names/signatures — against ground truth. Real
@@ -68,8 +68,8 @@ against — no rule changed, no design assumption was wrong).
 
 - **Batch 1 (Setup & Master Data)**: generate in this order — `"ocpf NAICS Code"` (table) →
   `"ocpf NAICS Code List"` → `"ocpf NAICS Code Card"` → `"ocpf Customer Ext"` →
-  `"ocpf Customer Card Ext"` → `"ocpf Customer List Ext"` → `"OCPF - READ"` →
-  `"OCPF - READ/WRITE"` (permission sets last, since they reference the table/pages generated
+  `"ocpf Customer Card Ext"` → `"ocpf Customer List Ext"` → `"OCPF NAICS - READ"` →
+  `"OCPF NAICS - RW"` (permission sets last, since they reference the table/pages generated
   earlier in the batch).
 - **Batch 2 (Documents)**: generate in this order — `"ocpf Sales Header Ext"` (introduces the
   field the six document page extensions and the posting codeunit all depend on) → the six
