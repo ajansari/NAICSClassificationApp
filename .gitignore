@@ -1,0 +1,22 @@
+# This framework's own files (Step 1 decision: excluded from this project's git tracking)
+CLAUDE.md
+LITE_RunbookChangeLog.md
+LITE_RunbookSchematics.md
+.ocpf/
+
+# OCPF AL Development Standards Guide — always gitignored
+standardsGuide/
+
+# OCPF BC AL Patterns Library — always gitignored (fetched at Step 3)
+patterns/
+
+# Generated translation files — rebuilt on every compile
+*.g.xlf
+
+# AL compiler / tooling artifacts
+.alpackages/
+.snapshots/
+*.app.log
+
+# OS cruft
+.DS_Store

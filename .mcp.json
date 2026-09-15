@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "al-mcp-bridge": {
+      "url": "http://127.0.0.1:39127/",
+      "type": "http"
+    },
+    "al": {
+      "command": "/Users/ajansari/.dotnet/tools/al",
+      "args": [
+        "launchmcpserver",
+        "/Users/ajansari/Documents/AL/Demo999",
+        "--packagecachepath",
+        "/Users/ajansari/Documents/AL/Demo999/.alpackages",
+        "--outfolder",
+        "/Users/ajansari/Documents/AL/Demo999/outputAppPackage",
+        "--noauth"
+      ],
+      "env": {
+        "DOTNET_ROOT": "/Users/ajansari/.dotnet"
+      }
+    }
+  }
+}
