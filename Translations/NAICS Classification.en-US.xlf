@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="NAICS Classification">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 3791362227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - NamedType 257787712" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This NAICS Code is assigned to one or more records and cannot be deleted.</source>
+          <target state="needs-review-translation">This NAICS Code is assigned to one or more records and cannot be deleted.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - NamedType DeleteBlockedErr</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the NAICS code (2 to 6 digits).</source>
+          <target state="needs-review-translation">Specifies the NAICS code (2 to 6 digits).</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="needs-review-translation">Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 3461834954 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of this NAICS classification.</source>
+          <target state="needs-review-translation">Specifies the description of this NAICS classification.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-review-translation">Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 1789400218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</source>
+          <target state="needs-review-translation">Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 1789400218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Level</source>
+          <target state="needs-review-translation">Level</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 723233035 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</source>
+          <target state="needs-review-translation">Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Parent Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3791362227 - Field 723233035 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent Code</source>
+          <target state="needs-review-translation">Parent Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table ocpf NAICS Code - Field Parent Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NAICS Code Card</source>
+          <target state="needs-review-translation">NAICS Code Card</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 707985127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the NAICS code (2 to 6 digits).</source>
+          <target state="needs-review-translation">Specifies the NAICS code (2 to 6 digits).</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 707985127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="needs-review-translation">Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 4232699882 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of this NAICS classification.</source>
+          <target state="needs-review-translation">Specifies the description of this NAICS classification.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-review-translation">Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 2883225786 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</source>
+          <target state="needs-review-translation">Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 2883225786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Level</source>
+          <target state="needs-review-translation">Level</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 2864424723 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</source>
+          <target state="needs-review-translation">Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control parentCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3935640103 - Control 2864424723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent Code</source>
+          <target state="needs-review-translation">Parent Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code Card - Control parentCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NAICS Codes</source>
+          <target state="needs-review-translation">NAICS Codes</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 707985127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the NAICS code (2 to 6 digits).</source>
+          <target state="needs-review-translation">Specifies the NAICS code (2 to 6 digits).</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 707985127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Code</source>
+          <target state="needs-review-translation">Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 4232699882 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of this NAICS classification.</source>
+          <target state="needs-review-translation">Specifies the description of this NAICS classification.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target state="needs-review-translation">Description</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 2883225786 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</source>
+          <target state="needs-review-translation">Specifies the number of digits in the code (2 = Sector through 6 = National Industry), derived automatically from Code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 2883225786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Level</source>
+          <target state="needs-review-translation">Level</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control level - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 2864424723 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</source>
+          <target state="needs-review-translation">Specifies the parent NAICS code one level up in the hierarchy. Blank for a 2-digit Sector code.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control parentCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1035215197 - Control 2864424723 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Parent Code</source>
+          <target state="needs-review-translation">Parent Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ocpf NAICS Code List - Control parentCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1283473586 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2259427799">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Blanket Sales Order Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1283473586 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2259427799">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Blanket Sales Order Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1527918109 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the NAICS code assigned to this customer.</source>
+          <target state="needs-review-translation">Specifies the NAICS code assigned to this customer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Customer Card Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1527918109 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Customer Card Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 544494807 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Specifies the NAICS code assigned to this customer.</source>
+          <target state="needs-review-translation">Specifies the NAICS code assigned to this customer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Customer List Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 544494807 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Customer List Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1621872603 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
+          <source>Specifies the NAICS code that was recorded on the sales document at the time of posting.</source>
+          <target state="needs-review-translation">Specifies the NAICS code that was recorded on the sales document at the time of posting.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Posted Sales CrMemo Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1621872603 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2716593954">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Posted Sales CrMemo Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2419412589 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Specifies the NAICS code that was recorded on the sales document at the time of posting.</source>
+          <target state="needs-review-translation">Specifies the NAICS code that was recorded on the sales document at the time of posting.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Posted Sales Invoice Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2419412589 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Posted Sales Invoice Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 639592704 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Credit Memo Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 639592704 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1708100201">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Credit Memo Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3302917334 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Invoice Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3302917334 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4034894651">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Invoice Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3167666055 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Order Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3167666055 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1673401186">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Order Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2087511995 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Quote Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2087511995 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 280137910">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Quote Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1843644393 - Control 308774837 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1598289728">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Return Order Ext - Control naicsCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1843644393 - Control 308774837 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1598289728">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension ocpf Sales Return Order Ext - Control naicsCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1437535513 - Field 1922352637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Specifies the NAICS (North American Industry Classification System) code assigned to this customer.</source>
+          <target state="needs-review-translation">Specifies the NAICS (North American Industry Classification System) code assigned to this customer.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Customer Ext - Field NAICS Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1437535513 - Field 1922352637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Customer Ext - Field NAICS Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642049689 - Field 1922352637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>Specifies the NAICS code that was recorded on the sales document at the time of posting.</source>
+          <target state="needs-review-translation">Specifies the NAICS code that was recorded on the sales document at the time of posting.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Cr Memo Header Ext - Field NAICS Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2642049689 - Field 1922352637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 552782286">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Cr Memo Header Ext - Field NAICS Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1207678624 - Field 1922352637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</source>
+          <target state="needs-review-translation">Specifies the NAICS code carried from the customer. Defaults when the customer is selected and can be changed on this document.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Header Ext - Field NAICS Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1207678624 - Field 1922352637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Header Ext - Field NAICS Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 105579343 - Field 1922352637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>Specifies the NAICS code that was recorded on the sales document at the time of posting.</source>
+          <target state="needs-review-translation">Specifies the NAICS code that was recorded on the sales document at the time of posting.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Invoice Header Ext - Field NAICS Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 105579343 - Field 1922352637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 809936682">
+          <source>NAICS Code</source>
+          <target state="needs-review-translation">NAICS Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension ocpf Sales Invoice Header Ext - Field NAICS Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 4072972759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OCPF NAICS Classification - Read</source>
+          <target state="needs-review-translation">OCPF NAICS Classification - Read</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet OCPF - READ - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1824263809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>OCPF NAICS Classification - Read/Write</source>
+          <target state="needs-review-translation">OCPF NAICS Classification - Read/Write</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet OCPF - READ/WRITE - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

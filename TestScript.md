@@ -1,0 +1,96 @@
+# Test Script — NAICS Classification
+
+For a human tester to run end to end against a published sandbox. Record every finding —
+including things that pass — in `ChangeLog.md` per the runbook's Step 7 instructions. This
+extension has no API pages, so the checklist below is UI-based rather than OData-based.
+
+**Before starting:** confirm the latest package is published
+(`outputAppPackage/OnlyCopilotFans_NAICS Classification_<version>.app`), and that you're signed
+in as a user assigned one of the `OCPF -` permission sets (see below for which test needs which).
+
+---
+
+## Green-team (happy path)
+
+### NAICS Code maintenance
+1. Open **NAICS Codes**. Create a code `31` / Description "Manufacturing". Confirm `Level` shows
+   `2` automatically and isn't directly editable.
+2. Create a code `311` / Description "Food Manufacturing" / Parent Code `31`. Confirm `Level`
+   shows `3`.
+3. Open the **NAICS Code Card** for `31` (drill down from the list) — confirm it shows the same
+   record.
+4. Edit `311`'s Description — confirm the change saves.
+
+### Customer assignment
+5. Open a Customer Card. Confirm a **NAICS Code** field appears (near Customer Posting Group).
+   Assign it `311` via the lookup — confirm only valid NAICS Codes are offered.
+6. Open the **Customer List** — confirm the NAICS Code column shows `311` for that customer.
+
+### Sales document flow-down (repeat the core check for all six document types)
+For each of: **Sales Quote, Sales Order, Sales Invoice, Sales Credit Memo, Sales Return Order,
+Blanket Sales Order**:
+7. Create a new document for the customer from step 5. Confirm **NAICS Code** auto-fills to
+   `311` once the customer is selected (field appears near Salesperson Code).
+8. Change **NAICS Code** on the document to `31` (a different code). Confirm the change is
+   accepted and stays.
+9. Change the document's customer to a *different* customer with no NAICS Code assigned. Confirm
+   **NAICS Code** on the document clears/re-defaults to blank.
+10. Re-select the original customer (with `311` assigned). Confirm **NAICS Code** re-defaults to
+    `311` (overwriting the manual `31` from step 8) — this is expected behavior, not a bug: BC
+    re-defaults inherited fields like this whenever the customer changes.
+
+### Posted documents
+11. Create a Sales Order for the customer from step 5, confirm NAICS Code defaults to `311`,
+    then post it as Invoice. Open **Posted Sales Invoice** — confirm **NAICS Code** shows `311`
+    and is **not editable**.
+12. Create a Sales Credit Memo for the same customer, confirm NAICS Code defaults, post it. Open
+    **Posted Sales Credit Memo** — confirm **NAICS Code** shows and is **not editable**.
+13. Back on the Sales Order/Credit Memo header data (or the customer), change the NAICS Code
+    assignment to something else. Confirm the *already-posted* Invoice/Credit Memo from steps 11–12
+    still show the original code (`311`) — posted records are a permanent snapshot, not a live
+    lookup.
+
+### Permission sets
+14. As a user assigned only `OCPF - READ` (+ `D365 READ`): confirm NAICS Codes can be viewed but
+    not created/edited/deleted.
+15. As a user assigned `OCPF - READ/WRITE` (+ `D365 BUS FULL ACCESS`): confirm full create/edit/
+    delete access to NAICS Codes.
+
+---
+
+## Red-team (boundary — each should fail *gracefully* with a clear, actionable message)
+
+16. Try to delete NAICS Code `311` while it's still assigned to the customer from step 5 (or used
+    on any document/posted document from steps 7–12). Expect a clear error naming that it's in
+    use — not a generic or technical error.
+17. Try to delete NAICS Code `31` while `311` still references it as **Parent Code**. (Note: this
+    extension does not block this case — `Parent Code` is not one of the four checked
+    relationships, only Customer/Sales Header/Sales Invoice Header/Sales Cr.Memo Header are.
+    Confirm the delete succeeds, and record whether that's actually the desired behavior — if the
+    team decides orphaned Parent Code references should also be blocked, that's a Step 7 finding
+    to log and fix.)
+18. On a Customer Card or sales document, try to type a NAICS Code that doesn't exist in the list
+    (bypass the lookup, e.g. paste text). Expect a validation error, not a silent accept.
+19. As a user assigned only `OCPF - READ` (no write), attempt to create a new NAICS Code directly
+    (not via the UI action, if your test approach allows attempting the underlying write).
+    Expect a permission error, not success.
+20. As a user with no `OCPF -` permission set assigned at all, open the NAICS Codes page. Expect
+    it to be inaccessible or empty, not a runtime error.
+
+---
+
+## Language pass
+
+Not applicable — this release targets English (en-US) only, no other language is required at
+first release (see `ProjectParameters.md`).
+
+---
+
+## Translation approval (release gate)
+
+The `.g.xlf`/`en-US.xlf` translation pair exists (auto-generated by the `TranslationFile`
+feature) but has not been reviewed or approved. Per the runbook's Step 7 translation-approval
+gate: a named reviewer must approve the `en-US` target file's units before release — the agent
+cannot set `signed-off` itself. Since target = source language here, review should be quick (a
+read-through confirming the auto-copied text is exactly what should display), but it is not
+optional. Log the reviewer's name and approval in `ChangeLog.md` when done.

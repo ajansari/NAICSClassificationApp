@@ -1,5 +1,25 @@
 # ChangeLog — NAICS Classification
 
+## Process Note 1 — Sandbox testing deferred past Step 5
+
+**Problem/context:** The Lite runbook's Step 5 exit gate calls for sandbox testing confirmed
+clean before Step 6 begins. The human explicitly chose to skip ahead to Batch 2 generation before
+Batch 1 was sandbox-tested (2026-09-15), and then, once both batches compiled clean, explicitly
+chose to move into Step 6 before any sandbox testing happened at all (2026-09-15) — deferring
+testing to Step 7's `TestScript.md` run instead.
+
+**Resolution:** Not a design deviation — no rule changed, nothing in `DesignDoc.md` is
+incorrect as a result. Logged here per Operating Rule 7 as a process-sequencing deviation from the
+runbook's normal step order, made explicitly and knowingly by the human. Step 7's exit gate (all
+green-team tests pass, all red-team tests fail gracefully) still applies in full — this doesn't
+relax that bar, it just moves the first real test run later than the runbook's default sequence.
+
+**Files affected:** none (process note only).
+
+**Design Doc updated:** no.
+
+---
+
 ## Issue 1 — Symbol packages wrongly diagnosed as unusable
 
 **Problem:** During Step 1, I inspected `.alpackages/Microsoft_Base Application_*.app` by
@@ -118,3 +138,24 @@ Standards-listed abbreviation. Updated `DesignDoc.md`'s object ID table and
 `PreflightChecklist.md`.
 
 **Design Doc updated:** yes.
+
+---
+
+## Deferred 1 — NAICS Code `OnDelete` does not check self-referencing `Parent Code`
+
+**Problem:** `DesignDoc.md`'s deletion-behavior decision for `"ocpf NAICS Code"` (block-if-
+referenced) checks four tables — Customer, Sales Header, Sales Invoice Header, Sales Cr.Memo
+Header — but not the table's own `Parent Code` field. Deleting a code that other NAICS Code
+records reference as their `Parent Code` succeeds, leaving those child records' `Parent Code`
+pointing at a no-longer-existing value (an orphaned reference — `TableRelation` only validates on
+insert/update of the referencing field, not on deletion of the referenced row).
+
+**Resolution:** Deferred, not fixed — this is a genuine open design question, not an oversight
+with an obvious right answer: does an orphaned `Parent Code` matter enough to block deletion
+over, given it's an informational hierarchy link rather than a value used in any calculation or
+posting? Surfaced explicitly in `TestScript.md` (Red-team item 17) for the human to test and
+decide at Step 7, rather than making that call unilaterally during Step 6.
+
+**Files affected:** none (design decision pending).
+
+**Design Doc updated:** no — pending the Step 7 decision.

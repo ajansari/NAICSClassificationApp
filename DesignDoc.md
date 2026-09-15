@@ -605,3 +605,54 @@ simplification).
 
 **0 blocking issues.** Outstanding non-blocking item: real symbol re-verification, tracked in
 `ProjectParameters.md` and re-raised at Step 5.
+
+---
+
+## Step 6 — As-Built Review (2026-09-15)
+
+**Gap-check:** all 20 objects in `src/` match this document's Object ID Allocation table exactly
+— same IDs (60470–60489), same names, same `extends` targets. No object planned but not built, no
+object built but not planned. One design detail was completed in two passes across the two
+batches (table 60470's `OnDelete` trigger — Batch 1 checked only Customer, Batch 2 added the
+three Sales-table checks once those fields existed) — a batching-sequencing artifact, not a gap;
+see `PreflightChecklist.md`'s batch-sequencing note.
+
+**Deviations during BUILD**, all logged in `ChangeLog.md`:
+- Issue 1: a symbol-package misdiagnosis (my own inspection error) that sent Step 2 through the
+  MS Learn fallback unnecessarily — retracted, real symbols confirmed working.
+- Issue 2: the MS-Learn-sourced posting-event names in this document's original Codeunit 60487
+  design were fabricated and didn't exist — corrected to the real events
+  (`OnBeforeSalesInvHeaderInsert`/`OnBeforeSalesCrMemoHeaderInsert`), verified by compile.
+- Issue 3: `ApplicationArea` was incorrectly placed on table/tableextension fields in three
+  code samples in this document (Step 2) and the corresponding generated files (Step 4) —
+  removed; `ApplicationArea` is a page-control property only.
+- Issue 4: `"ocpf Posted Sales Credit Memo Ext"` (34 characters) exceeded the 30-character
+  identifier limit — renamed to `"ocpf Posted Sales CrMemo Ext"` (28 characters) using the
+  Standards §4.2 `Credit Memo` → `CrMemo` abbreviation.
+- Process Note 1: sandbox testing was deferred past Step 5 at the human's explicit direction —
+  a process-sequencing choice, not a design deviation.
+
+**Code review:** ran a full mechanical sweep (no ML properties/`TextConst`, no dead code/TODOs,
+no tabs, consistent 4-space indentation, `Caption`/`ToolTip`/`ApplicationArea = All` present on
+every page field, `Rec.`-qualification throughout — guaranteed by `NoImplicitWith` failing the
+compile otherwise) plus a targeted pass against the BCQuality snapshot's most relevant knowledge
+articles (data-modeling: owning-table-delete-dependents — correctly not applied, since NAICS
+Code's referencing tables are independent entities, not owned dependents, so block-if-referenced
+is the right pattern, not cascade-delete; table-relation-extensions-top-down — not applicable, no
+existing `TableRelation` is being extended; events: publisher-design articles — not applicable,
+this project only subscribes, never publishes; style: file-naming pattern, page-name-matches-
+source-table, named-invocations-not-object-ids, no-else-after-terminating-statement — all
+checked and compliant). **Note on method:** the snapshot's full automated dispatch
+(`skills/entry.md`) requires a PowerShell-built knowledge index (`Build-KnowledgeIndex.ps1`),
+and no PowerShell is installed on this machine (Rule 6b — not installed without asking, and not
+asked since this is a secondary, non-blocking pass). Substituted a manual, targeted read of the
+knowledge domains actually relevant to this project's code (data-modeling, events, style) instead
+of the full JSON-dispatch protocol. No findings survived — see `ChangeLog.md` for anything that
+did surface (all caught earlier, by the compiler, and already logged as Issues 1–4).
+
+**Anti-Patterns table (Standards Part 7):** checked line by line against the codebase — no
+violations. Several rows are structurally N/A (no API pages, no Option fields, no legacy price
+tables). Translation-state rows (§8.2–§8.7) are not yet applicable — the `.g.xlf`/`.en-US.xlf`
+pair exists (generated automatically by the `TranslationFile` feature) but has not yet been
+through human review/approval; tracked as an open item for Step 7's release gate, not a Step 6
+finding.
