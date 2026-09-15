@@ -176,6 +176,30 @@ keep the full "Read/Write" wording. Recompiled clean (0 errors, 0 warnings) and 
 
 ---
 
+## Issue 6 — NAICS Codes list page not found by BC search
+
+**Problem:** AJ Ansari reported that searching "NAICS" in BC doesn't return page 60471
+`"ocpf NAICS Code List"`, even though they have SUPER and can open the page through the
+Customer card's NAICS Code lookup ("Show full list").
+
+**Root cause:** The page set `UsageCategory = Lists` but had no page-level `ApplicationArea`.
+BC search only includes pages that set both properties on the page object. `ApplicationArea = All`
+on the field controls makes the fields visible, but search ignores it, and the page still opens
+when another object calls it, such as the lookup. It compiles with no warning, so neither the
+compiler nor the pre-flight checklist caught it. The checklist only covered field-level
+`ApplicationArea`. The Standards Guide doesn't mention `UsageCategory` at all, so this is a
+candidate addition to Standards §1.4 or the patterns library.
+
+**Resolution:** Added `ApplicationArea = All;` at page level on `"ocpf NAICS Code List"`. It's the
+only page with `UsageCategory`, so no other file has this problem. Added a check to
+`PreflightChecklist.md` and corrected the page spec in `DesignDoc.md`.
+
+**Files affected:** `src/Page/NAICSCodeList.Page.al`, `DesignDoc.md`, `PreflightChecklist.md`.
+
+**Design Doc updated:** yes.
+
+---
+
 ## Deferred 1 — NAICS Code `OnDelete` does not check self-referencing `Parent Code`
 
 **Problem:** `DesignDoc.md`'s deletion-behavior decision for `"ocpf NAICS Code"` (block-if-

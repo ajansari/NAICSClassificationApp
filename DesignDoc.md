@@ -187,8 +187,10 @@ table 60470 "ocpf NAICS Code"
 #### 2. Page 60471 `"ocpf NAICS Code List"`
 
 - `PageType = List`; `SourceTable = "ocpf NAICS Code"`; `Editable = true` (master data).
-- `ApplicationArea = All` on every field; `UsageCategory = Lists`; `AdditionalSearchTerms` not
-  required.
+- `UsageCategory = Lists` **and page-level `ApplicationArea = All`** — both are required on the
+  page object for it to appear in BC search; field-level `ApplicationArea` doesn't count
+  (`ChangeLog.md` Issue 6). `ApplicationArea = All` on every field too. `AdditionalSearchTerms`
+  not required.
 - **Departments placement** (Step 1 onboarding decision): `promoted` action group not required;
   add this page's entry point under **Departments → Sales → NAICS Classification** navigation
   group per Standards' general navigation guidance (no Standards-specific rule beyond standard AL

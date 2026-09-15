@@ -6,6 +6,7 @@ page 60471 "ocpf NAICS Code List"
     PageType = List;
     SourceTable = "ocpf NAICS Code";
     UsageCategory = Lists;
+    ApplicationArea = All;
     Editable = true;
     CardPageId = "ocpf NAICS Code Card";
 

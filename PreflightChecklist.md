@@ -18,6 +18,8 @@ Run both passes on every object during Step 4, before moving to the next object 
 
 - [ ] `Caption` present on the object/field.
 - [ ] `ToolTip` present on every field control (not generic — field-specific, per Standards §2.6).
+- [ ] Any page with `UsageCategory` also sets `ApplicationArea = All` **at page level** — without
+      it the page compiles clean but never appears in BC search (Issue 6).
 - [ ] `ApplicationArea = All` on every **page** field control, no exceptions. **`ApplicationArea`
       is a page-control property only — never set it on a `table`/`tableextension` field
       definition** (AL0124 at compile; caught in Batch 1 on 2026-09-15, fixed on
